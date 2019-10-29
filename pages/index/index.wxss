@@ -1,0 +1,7 @@
+/* 商城首页 css */
+
+/* 字体图标样式 */
+.iconfont {
+    text-align: center;
+    color: #1aad19;
+}

@@ -1,0 +1,4 @@
+/* 项目入口样式 */
+
+/* 导入 公共样式 */
+@import "./common/style.wxss";
