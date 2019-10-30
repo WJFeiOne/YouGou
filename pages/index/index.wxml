@@ -1,3 +1,62 @@
 <!-- 商城首页 -->
 
-<view class="iconfont iconweixin">首页</view>
+<!-- 搜索栏 -->
+<view class="search">
+    <!-- 搜索输入框 -->
+    <view class="search-input">
+        <!-- 小程序原生搜索图标 -->
+        <icon type="search" size="16"></icon>
+        搜索
+    </view>
+</view>
+
+<!-- indicator-dots是否显示轮播图指示点 -->
+<swiper indicator-dots>
+    <!-- 循环渲染轮播图数据 -->
+    <block wx:for="{{banners}}" wx:key="{{index}}">
+        <swiper-item>
+            <!-- 轮播图图片 -->
+            <image src="{{item.image_src}}" mode="aspectFill" class="banner-image"></image>
+        </swiper-item>
+    </block>
+</swiper>
+
+<!-- 分类菜单 -->
+<view class="menus">
+    <!-- 循环渲染分类菜单数据 -->
+    <navigator url="" wx:for="{{menus}}" wx:key="{{index}}">
+        <!-- 分类菜单图片 -->
+        <image src="{{item.image_src}}"></image>
+    </navigator>
+</view>
+
+<!-- 商品楼层列表 -->
+<view wx:for="{{floors}}" wx:key="{{index}}">
+    <!-- 商品楼层标题 -->
+    <view class="floor-title">
+        <!-- 标题背景图片 -->
+        <image mode="aspectFill" src="{{item.floor_title.image_src}}"></image>
+    </view>
+
+    <!-- 商品展示列表 -->
+    <view class="floor">
+
+        <!-- 左侧的大图 -->
+        <view class="left">
+            <!-- 商品链接 -->
+            <navigator url="{{ item.product_list[0].navigator_url }}">
+                <!-- 商品图片 -->
+                <image src="{{ item.product_list[0].image_src }}"></image>
+            </navigator>
+        </view>
+
+        <!-- 右侧的四张小图 -->
+        <view class="right">
+            <!-- 商品链接 -->
+            <navigator url="{{ item.navigator_url }}" wx:for="{{ item.product_list }}" wx:key="{{index}}" wx:if="{{ index > 0 }}">
+                <!-- 商品图片 -->
+                <image src="{{ item.image_src }}"></image>
+            </navigator>
+        </view>
+    </view>
+</view>

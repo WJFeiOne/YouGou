@@ -8,9 +8,9 @@
     ],
     "window": {
         "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "WeChat",
-        "navigationBarTextStyle": "black"
+        "navigationBarBackgroundColor": "#ff2d4a",
+        "navigationBarTitleText": "优购小商城",
+        "navigationBarTextStyle": "white"
     },
     "sitemapLocation": "sitemap.json",
     "tabBar": {
