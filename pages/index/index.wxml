@@ -1,14 +1,7 @@
 <!-- 商城首页 -->
 
-<!-- 搜索栏 -->
-<view class="search">
-    <!-- 搜索输入框 -->
-    <view class="search-input">
-        <!-- 小程序原生搜索图标 -->
-        <icon type="search" size="16"></icon>
-        搜索
-    </view>
-</view>
+<!-- 导入搜索栏组件 -->
+<search/>
 
 <!-- indicator-dots是否显示轮播图指示点 -->
 <swiper indicator-dots>

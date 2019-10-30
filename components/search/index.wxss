@@ -1,0 +1,24 @@
+/* 搜索栏封装 css */
+
+/* 搜索栏样式 */
+.search {
+    background: #ff2d4a;
+    padding: 20rpx;
+}
+
+/* 搜索输入看样式 */
+.search .search-input {
+    background: #fff;
+    height: 60rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #999;
+    border-radius: 4px;
+}
+
+/* 搜索图标样式 */
+.search .search-input icon {
+    margin-right: 10rpx;
+}

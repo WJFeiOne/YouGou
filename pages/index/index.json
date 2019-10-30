@@ -1,4 +1,6 @@
 {
-  "description": "商城首页配置文件",
-  "usingComponents": {}
+    "description": "商城首页配置文件",
+    "usingComponents": {
+        "search": "../../components/search/index"
+    }
 }
