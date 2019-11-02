@@ -1,1 +1,91 @@
-/* pages/category/index.wxss */
+/* 分类页面 css */
+
+
+/* 分类菜单样式 */
+.container {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 100rpx;
+    bottom: 0;
+}
+
+/* 菜单列表样式 */
+.menu {
+    width: 200rpx;
+    height: 100%;
+    background: #eee;
+    overflow-y: auto;
+}
+
+/* 菜单列表项样式 */
+.menu-item {
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    border-bottom: 1px #ddd solid;
+    font-size: 14px;
+}
+
+/* 菜单列表项背景样式 */
+.active {
+    background: #fff;
+    color: red;
+    position: relative;
+}
+
+/* 菜单列表项边框样式 */
+.active::before {
+    display: block;
+    content: "";
+    width: 2px;
+    height: 60rpx;
+    background: red;
+    position: absolute;
+    left: 0;
+    top: 20rpx;
+}
+
+/* 右边的品牌列表样式 */
+.content {
+    flex: 1;
+    padding: 20rpx;
+    overflow-y: scroll;
+}
+
+/* 品牌列表标题样式 */
+.brand-title {
+    margin: 20rpx 0;
+    text-align: center;
+}
+
+/* 品牌列表标题斜线样式 */
+.brand-title text{
+  color:#ddd;
+  margin: 0 5px;
+}
+
+/* 商品展示样式 */
+.brands {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* 商品展示项样式 */
+.brand-item {
+    width: 33.33%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* 商品图片样式 */
+.brand-item image {
+    width: 120rpx;
+    max-height: 120rpx;
+}
+
+/* 商品名称样式 */
+.brand-text {
+    font-size: 12px;
+    text-align: center;
+}

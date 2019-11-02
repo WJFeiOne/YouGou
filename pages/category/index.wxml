@@ -1,2 +1,40 @@
-<!--pages/category/index.wxml-->
-<text>pages/category/index.wxml</text>
+<!-- 分类页面 -->
+
+
+<!-- 导入搜索栏组件 -->
+<search/>
+
+<!-- 分类菜单 -->
+<view class="container">
+    <!-- 左侧的菜单列表 -->
+    <view class="menu">
+        <!-- 遍历渲染菜单列表 -->
+        <view class="menu-item {{ current === index ? 'active': ''}}" wx:for="{{ list }}" wx:key="{{ index }}" bindtap="handleChange" data-index="{{index}}">
+            {{ item.cat_name }}
+        </view>
+    </view>
+
+    <!-- 右边的品牌列表 -->
+    <view class="content">
+        <!-- 遍历渲染品牌列表 -->
+        <view wx:for="{{ list[current].children }}" wx:key="{{index}}">
+            <!-- 分类标题 -->
+            <view class="brand-title">
+                <text>/ </text>{{ item.cat_name }}
+                <text>/ </text>
+            </view>
+
+            <!-- 分类商品展示 -->
+            <view class="brands">
+                <!-- 商品链接 -->
+                <navigator url="" class="brand-item" wx:for="{{ item.children }}" wx:key="{{index}}">
+                    <!-- 商品图片 -->
+                    <image src="{{ item.cat_icon }}" mode="aspectFill"></image>
+                    <!-- 商品名称 -->
+                    <view class="brand-text">{{ item.cat_name }}</view>
+                </navigator>
+            </view>
+        </view>
+
+    </view>
+</view>
