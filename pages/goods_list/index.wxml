@@ -18,7 +18,7 @@
 </view>
 
 <!-- 循环渲染商品列表 -->
-<navigator wx:for="{{goods}}" wx:key="{{index}}" url="" class="goods-item">
+<navigator wx:for="{{goods}}" wx:key="{{index}}" url="/pages/goods_detail/index?goods_id={{ item.goods_id }}"  class="goods-item">
     <!-- 商品图片 -->
     <image src="{{ item.goods_small_logo }}" mode="aspectFill"></image>
     <!-- 商品列表描述 -->

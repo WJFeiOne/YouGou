@@ -1,0 +1,116 @@
+/* 商品详情 css */
+
+/* 商品轮播图样式 */
+.swiper {
+    height: 720rpx;
+}
+
+/* 轮播图样式 */
+.swiper image {
+    width: 100%;
+    height: 100%;
+}
+
+/* 商品信息样式 */
+.goods-info {
+    padding: 20rpx;
+    border-bottom: 20rpx #eee solid;
+}
+
+/* 商品价格样式 */
+.goods-price {
+    font-size: 22px;
+    color: red;
+    margin-bottom: 20rpx;
+}
+
+/* 标题部分样式 */
+.goods-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20rpx;
+}
+
+/* 商品标题样式 */
+.goods-title-left {
+    flex: 1;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    /*控制在3行*/
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+/* 收藏按钮样式 */
+.goods-star {
+    width: 100rpx;
+    font-size: 12px;
+    color: #999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px #ddd solid;
+    margin-left: 20rpx;
+}
+
+/* 快递信息样式 */
+.express {
+    color: #999;
+    font-size: 14px;
+}
+
+/* 商品详情样式 */
+.richtext {
+    width: 100%;
+    height: 95rpx;
+}
+
+/* 底部按钮样式 */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100rpx;
+    background: #fff;
+    display: flex;
+}
+
+/* 打开客服窗口样式 */
+.contact {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20%;
+    height: 100rpx;
+    opacity: 0;
+}
+
+/* 联系客服样式 */
+.btn-left {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: #666;
+}
+
+/* 加入购物车样式 */
+.btn-right {
+    width: 30%;
+    line-height: 100rpx;
+    text-align: center;
+    color: #fff;
+    background: orange;
+    font-size: 14px;
+}
+
+/* 立即购买样式 */
+.btn-right:last-child {
+    background: red;
+}
