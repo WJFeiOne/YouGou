@@ -27,7 +27,7 @@
             <!-- 分类商品展示 -->
             <view class="brands">
                 <!-- 商品链接 -->
-                <navigator url="" class="brand-item" wx:for="{{ item.children }}" wx:key="{{index}}">
+                <navigator url="/pages/goods_list/index?query={{ item.cat_name }}"  class="brand-item" wx:for="{{ item.children }}" wx:key="{{index}}">
                     <!-- 商品图片 -->
                     <image src="{{ item.cat_icon }}" mode="aspectFill"></image>
                     <!-- 商品名称 -->

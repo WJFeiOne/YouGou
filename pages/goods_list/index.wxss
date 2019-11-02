@@ -1,0 +1,86 @@
+/* 商品列表 css */
+
+/* 头部搜索栏样式 */
+.search{
+  background:#eee;
+  padding: 20rpx;
+}
+
+/* 搜索输入框样式 */
+.search .search-input{
+  background: #fff;
+  height:60rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 14px;
+  color:#999;
+  border-radius: 4px;
+  padding: 0 20rpx;
+}
+
+/* 搜索图标样式 */
+.search .search-input icon{
+  margin-right:10rpx;
+}
+
+/* 商品排序样式 */
+.goods-sort{
+  display: flex;
+  padding: 20rpx;
+  justify-content: space-around;
+  font-size: 14px;
+  border-bottom:1px #ddd solid;
+}
+
+/* 商品排序高亮样式 */
+.goods-sort .active{
+  color:red;
+}
+
+/* 商品列表样式 */
+.goods-item{
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx;
+  border-bottom:1px #ddd solid;
+}
+
+/* 商品图片样式 */
+.goods-item image{
+  width:200rpx;
+  height:200rpx;
+}
+
+/* 商品列表描述 */
+.goods-item-right{
+  flex:1;
+  padding-left:20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* 商品描述 */
+.goods-title{
+  font-size:14px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  /*控制在3行*/
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+}
+
+/* 商品价格样式 */
+.goods-price{
+  color:red;
+}
+
+/* 加载状态样式 */
+.loading{
+  padding: 20rpx;
+  color:#ccc;
+  text-align: center;
+  font-size:14px;
+  }

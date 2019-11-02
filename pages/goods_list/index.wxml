@@ -1,0 +1,41 @@
+<!-- 商品列表页面 -->
+
+<!-- 头部搜索栏 -->
+<view class="search">
+    <!-- 搜索输入框 -->
+    <view class="search-input">
+        <!-- 搜索图标 -->
+        <icon type="search" size="16"></icon>
+        {{query}}
+    </view>
+</view>
+
+<!-- 头部排序 -->
+<view class="goods-sort">
+    <view class="active">综合</view>
+    <view>销量</view>
+    <view>价格</view>
+</view>
+
+<!-- 循环渲染商品列表 -->
+<navigator wx:for="{{goods}}" wx:key="{{index}}" url="" class="goods-item">
+    <!-- 商品图片 -->
+    <image src="{{ item.goods_small_logo }}" mode="aspectFill"></image>
+    <!-- 商品列表描述 -->
+    <view class="goods-item-right">
+        <!-- 商品描述 -->
+        <view class="goods-title">
+            {{ item.goods_name }}
+        </view>
+        <!-- 商品价格 -->
+        <view class="goods-price">
+            ￥{{ item.goods_price }}
+        </view>
+    </view>
+</navigator> 
+
+<!-- 加载中提示 -->
+<view class="loading" wx:if="{{hasMore}}">正在加载...</view>
+
+<!-- 加载完毕提示 -->
+<view class="loading" wx:if="{{!hasMore}}">没有更多商品了！</view>
