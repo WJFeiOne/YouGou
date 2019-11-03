@@ -65,10 +65,14 @@ Page({
         // 从本地存储 获取搜索历史 数据
         const arr = wx.getStorageSync('search') || [];
 
-        // 判断 输入框的值是否为空
-        if (!this.data.searchValue) {
+        // 判断 输入框的值是否为空或者为空格
+        if (!this.data.searchValue.trim()) {
+            // 清空 输入框的值
+            this.setData({
+                searchValue: ""
+            })
             return;     // 退出
-        }
+        } 
 
         let lisi = [];  // 定义 搜索历史数组
 
