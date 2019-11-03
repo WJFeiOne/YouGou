@@ -1,0 +1,62 @@
+/* 搜索商品 css */
+
+/* 搜索条顶部样式 */
+.search-wrapper {
+    padding: 20rpx;
+    background: #eee;
+    display: flex;
+}
+
+/* 搜索栏样式 */
+.search-input {
+    flex: 1;
+    height: 60rpx;
+    background: #fff;
+    margin-right: 20rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20rpx;
+    border-radius: 4px;
+}
+
+/* 搜索输入框样式 */
+.search-input input {
+    flex: 1;
+    font-size: 14px;
+    padding-left: 20rpx;
+}
+
+/* 取消按钮样式 */
+.cancel {
+    border: 1px #ddd solid;
+    width: 120rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+/* 搜索历史标题样式 */
+.h2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 20rpx;
+}
+
+ /* 历史搜索列表样式 */
+.history {
+    padding: 20rpx;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* 搜索内容样式 */
+.history-item {
+    background: #eee;
+    margin: 20rpx 10rpx;
+    padding: 3px 10px;
+    font-size: 14px;
+}

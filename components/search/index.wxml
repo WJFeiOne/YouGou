@@ -3,7 +3,7 @@
 <!-- 搜索栏 -->
 <view class="search">
     <!-- 搜索输入框 -->
-    <view class="search-input">
+    <view class="search-input" bindtap="Search">
         <!-- 小程序原生搜索图标 -->
         <icon type="search" size="16"></icon>
         搜索

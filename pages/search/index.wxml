@@ -1,0 +1,31 @@
+<!-- 搜索商品页面 -->
+
+<!-- 搜索条顶部 -->
+<view class="search-wrapper">
+    <!-- 搜索栏 -->
+    <view class="search-input">
+        <!-- 搜索图标 -->
+        <icon type="search" size="14"></icon>
+        <!-- 搜索输入框 -->
+        <input placeholder="请输入您想要的商品" bindinput="handleInput" value="{{searchValue}}" bindconfirm="handlleConfirm">
+        </input>
+    </view>
+    <!-- 取消按钮 判断输入框有值才显示 -->
+    <view class="cancel" bindtap="handleCancel" wx:if="{{showCancel}}">取消</view>
+</view>
+
+<!-- 历史搜索 -->
+<view class="h2">
+    <!-- 标题 -->
+    <view>历史搜索</view>
+    <!-- 清除按钮 -->
+    <icon type="clear" size="14" bindtap="handleClear"></icon>
+</view>
+
+<!-- 历史搜索列表 -->
+<view class="history">
+    <!-- 搜索内容 -->
+    <navigator class="history-item" wx:for="{{keywords}}" wx:key="{{index}}" url="/pages/goods_list/index?searchValue={{item}}">
+        {{ item }}
+    </navigator>
+</view>
