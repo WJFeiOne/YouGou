@@ -1,13 +1,17 @@
 <!-- 商品列表页面 -->
 
 <!-- 头部搜索栏 -->
-<view class="search">
-    <!-- 搜索输入框 -->
+<view class="search-wrapper">
+    <!-- 搜索栏 -->
     <view class="search-input">
         <!-- 搜索图标 -->
-        <icon type="search" size="16"></icon>
-        {{query}}
+        <icon type="search" size="14"></icon>
+        <!-- 搜索输入框 -->
+        <input placeholder="请输入您想要的商品" bindinput="handleInput" value="{{searchValue}}" bindconfirm="handlleConfirm">
+        </input>
     </view>
+    <!-- 取消按钮 判断输入框有值才显示 -->
+    <view class="cancel" bindtap="handleCancel" wx:if="{{showCancel}}">取消</view>
 </view>
 
 <!-- 头部排序 -->
