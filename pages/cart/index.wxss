@@ -1,1 +1,199 @@
-/* pages/cart/index.wxss */
+/* 购物车页面 css */
+
+/* 没有收获地址时候显示样式 */
+.address-bar {
+    padding: 20rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px #ddd solid;
+}
+
+/* 右箭头样式 */
+.arrow {
+    width: 10px;
+    height: 10px;
+    border-top: 1px #999 solid;
+    border-right: 1px #999 solid;
+    transform: rotate(45deg);
+    margin-right: 6px;
+}
+
+/* 收货地址信息样式 */
+.address-info {
+    padding: 20rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 联系信息样式 */
+.address-tel {
+    display: flex;
+    align-items: center;
+}
+
+/* 收货地址样式 */
+.address-detail {
+    padding: 20rpx;
+    padding-top: 0;
+}
+
+/* 底部斑马条样式 */
+.address image {
+    height: 14rpx;
+    width: 100%;
+}
+
+/* 购物车为空显示 */
+.empty {
+    display: flex;
+    justify-content:center;
+    margin-top: 400rpx;
+}
+
+/* 购物车有数据显示样式 */
+.goods-list {
+    border-top: 20rpx #eee solid;
+    padding-bottom: 100rpx;
+}
+
+/* 购物车列表样式 */
+.goods-item {
+    padding: 20rpx;
+    border-bottom: 1px #ddd solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 商品选中样式 */
+.goods-item icon {
+    margin: 0 20rpx;
+}
+
+/* 右侧商品详细信息样式 */
+.goods-info {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20rpx;
+}
+
+/* 商品图片样式 */
+.goods-info image {
+    width: 160rpx;
+    height: 160rpx;
+    display: block;
+    margin-right: 20rpx;
+}
+
+/* 右侧标题价格数量部分样式 */
+.info-right {
+    height: 180rpx;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* 商品标题样式 */
+.info-title {
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    /*控制在3行*/
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+/* 价格与数量样式 */
+.info-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 商品价格样式 */
+.info-price {
+    font-size: 16px;
+    color: red;
+}
+
+/* 加减数量样式 */
+.info-num {
+    display: flex;
+    align-items: center;
+}
+
+/* 数量输入框样式 */
+.info-num input {
+    width: 40px;
+    text-align: center;
+}
+
+/* 加减按钮样式 */
+.info-num-btn {
+    padding: 5rpx 20rpx;
+    border: 1px #ddd solid;
+}
+
+/* 删除按钮样式 */
+.dele {
+    margin: 0 !important;
+    padding-left: 20rpx;
+}
+
+/* 底部结算样式 */
+.footer {
+    height: 100rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: 1px #eee solid;
+}
+
+/* 全选按钮样式 */
+.footer-left {
+    display: flex;
+    align-items: center;
+    padding: 0 20rpx;
+}
+
+/* 全选图标样式 */
+.footer-left icon {
+    margin-right: 20rpx;
+}
+
+/* 商品合计样式 */
+.footer-center {
+    flex: 1;
+    padding: 0 20rpx;
+}
+
+/* 运费信息样式 */
+.footer-center .btm {
+    font-size: 12px;
+    color: #999;
+}
+
+/* 合计价格样式 */
+.footer-center text {
+    color: red;
+}
+
+/* 结算按钮样式 */
+.checkout {
+    width: 200rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    background: red;
+    color: white;
+}

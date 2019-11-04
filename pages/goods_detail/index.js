@@ -30,5 +30,52 @@ Page({
                 detail: message
             })
         })
+    },
+
+    // 点击 添加到本地的购物车
+    handleAddCart(event) {
+        // 从本地获取 购物车列表
+        const goods = wx.getStorageSync("goods") || {};
+        
+        // 从商品详情 解构购物车数据
+        const { goods_id, goods_name, goods_small_logo, goods_price } = this.data.detail;
+
+        // 判断 商品是否已经在购物车中 有则数量加 1
+        let number = goods[goods_id] ? goods[goods_id].number + 1 : 1;
+
+        // 判断 是否为立即购买
+        if (event.currentTarget.dataset.purchase === "purchase") {
+            // 判断 商品是否已经在购物车中 有则数量相等
+            number = goods[goods_id] ? goods[goods_id].number : 1;
+        }
+
+        // 拼接购物车参数 使用对象的方式存储是方便快速查找属性
+        goods[goods_id] = {
+            goods_id,           // 商品 id  参数
+            goods_name,         // 商品 描述 参数
+            goods_small_logo,   // 商品 图片 参数
+            goods_price,        // 商品 价格 参数
+            number,             // 商品 数量 参数
+            selected: true      // 商品 默认选中 状态
+        }
+
+        // 将购物车数据 保存到本地
+        wx.setStorageSync("goods", goods)
+        
+        // 判断 是否为立即购买
+        if (event.currentTarget.dataset.purchase === "purchase"){
+
+            // 跳转 到购物车页面
+            wx.switchTab({
+                url: "/pages/cart/index"  // 跳转接口
+            })
+        }else{
+            // 弹出添加成功提示
+            wx.showToast({
+                title: '添加购物车成功',   // 提示内容
+                icon: 'success',          // 提示图标
+                duration: 2000            // 提示时长
+            })
+        }
     }
 })

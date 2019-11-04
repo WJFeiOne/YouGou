@@ -48,11 +48,11 @@
         <view>购物车</view>
     </navigator>
     <!-- 加入购物车 -->
-    <view class="btn-right">
+    <view class="btn-right" bindtap="handleAddCart">
         加入购物车
     </view>
     <!-- 立即购买 -->
-    <view class="btn-right">
+    <view class="btn-right" bindtap="handleAddCart" data-purchase="purchase">
         立即购买
     </view>
 </view>
