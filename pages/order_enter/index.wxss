@@ -1,0 +1,113 @@
+/* 订单支付页面 css */
+
+/* 收货地址信息样式 */
+.address-info {
+    padding: 20rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 联系信息样式 */
+.address-tel {
+    display: flex;
+    align-items: center;
+}
+
+/* 右箭头样式 */
+.arrow {
+    width: 10px;
+    height: 10px;
+    border-top: 1px #999 solid;
+    border-right: 1px #999 solid;
+    transform: rotate(45deg);
+    margin: 0 6px;
+}
+
+/* 地址信息样式 */
+.address-detail {
+    padding: 0 20rpx;
+}
+
+/* 底部斑马线样式 */
+.address image {
+    height: 14rpx;
+    width: 100%;
+}
+
+/* 购物车列表样式 */
+.goods-list {
+    border-top: 20rpx #eee solid;
+    padding-bottom: 100rpx;
+}
+
+/* 订单商品信息样式 */
+.goods-item {
+    padding: 20rpx;
+    border-bottom: 1px #ddd solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 商品信息样式 */
+.goods-info {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20rpx;
+}
+
+/* 商品图片样式 */
+.goods-info image {
+    width: 160rpx;
+    height: 160rpx;
+    display: block;
+    margin-right: 20rpx;
+}
+
+/* 商品描述样式 */
+.info-right {
+    height: 180rpx;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* 商品描述样式 */
+.info-title {
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    /*控制在3行*/
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+/* 价格和数量样式 */
+.info-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 商品价格样式 */
+.info-price {
+    font-size: 16px;
+    color: red;
+}
+
+/* 商品购买件数样式 */
+.info-num {
+    display: flex;
+    align-items: center;
+}
+
+/* 字付按钮样式 */
+.allprice {
+    padding: 20rpx;
+    color: red;
+}

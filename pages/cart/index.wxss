@@ -16,7 +16,7 @@
     border-top: 1px #999 solid;
     border-right: 1px #999 solid;
     transform: rotate(45deg);
-    margin-right: 6px;
+    margin: 0 6px;
 }
 
 /* 收货地址信息样式 */
@@ -35,8 +35,7 @@
 
 /* 收货地址样式 */
 .address-detail {
-    padding: 20rpx;
-    padding-top: 0;
+    padding: 0 20rpx;
 }
 
 /* 底部斑马条样式 */

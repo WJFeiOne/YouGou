@@ -16,6 +16,7 @@ Page({
 
     // 点击 获取收货地址
     handleAddress() {
+        
         // 调用 微信获取地址 接口
         wx.chooseAddress({
             // 获取 成功的方法
@@ -27,8 +28,10 @@ Page({
                         userName: res.userName,
                         telNumber: res.telNumber,
                         detail: res.provinceName + res.cityName + res.countyName + res.detailInfo
-                    }
+                    },
                 })
+                // 把收获地址保存到本地
+                wx.setStorageSync("address", this.data.address);
             }
         })
     },
@@ -45,7 +48,7 @@ Page({
 
             wx.setStorageSync("goods", goods);  // 将购物车列表 保存到本地
             this.handleAllPrice();              // 调用 计算总价格 方法
-            return;   // 退出
+            return;       // 退出
         }
         
         let quantity = 0  // 定义 计算商品数量变量
@@ -173,12 +176,12 @@ Page({
             allPrice: price
         })
     },
-    
+
     // 点击 删除按钮时候触发
     handleDele(event) {
         const { id } = event.target.dataset;  // 从 event 中解构该商品的 id
         const { goods } = this.data;          // 获取 购物车 列表
-        
+
         // 弹出 是否删除提示 
         wx.showModal({
             title: '提示',                                
@@ -230,5 +233,17 @@ Page({
             allSelected: !allSelected
         });
 
+    },
+
+    handleSubmit() {
+        // 判断本地是否有token，有token就跳转到订单支付页，没有跳转到登录页
+        if(wx.getStorageSync("token")){
+            wx.navigateTo({
+            url: '/pages/order_enter/index',
+        })}else {
+            wx.navigateTo({
+                url: '/pages/auth/index',
+            })
+        }
     }
 })
