@@ -1,0 +1,7 @@
+<!-- 登录授权页面 -->
+
+<!-- 登录授权 -->
+<view style="padding:200rpx 50rpx;">
+    <!-- 登录授权按钮 -->
+    <button open-type="getUserInfo" type="primary" bindgetuserinfo="handleGetUserInfo" style="width:650rpx">授权</button>
+</view>
