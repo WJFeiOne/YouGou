@@ -45,15 +45,7 @@
 		},
 		"miniprogram": {
 			"current": -1,
-			"list": [
-				{
-					"id": 0,
-					"name": "pages/personal/index",
-					"pathName": "pages/personal/index",
-					"query": "goods_id=47866",
-					"scene": null
-				}
-			]
+			"list": []
 		}
 	}
 }

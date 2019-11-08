@@ -4,7 +4,7 @@
 <search/>
 
 <!-- indicator-dots是否显示轮播图指示点 -->
-<swiper indicator-dots>
+<swiper indicator-dots autoplay autoplay interval="3000" circular indicator-color="rgba(0,0,0,.2)" indicator-active-color="#000">
     <!-- 循环渲染轮播图数据 -->
     <block wx:for="{{banners}}" wx:key="{{index}}">
         <swiper-item>
