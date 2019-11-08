@@ -1,1 +1,187 @@
-/* pages/personal/index.wxss */
+/* 个人中心页面 css */
+
+/* 页面背景样式 */
+page {
+    background-color: #edece8;
+}
+
+/* 用户信息样式 */
+.user_img_wrap {
+    position: relative;
+    height: 40vh;
+    overflow: hidden;
+}
+
+/* 用户头像背景样式 */
+.user_img_bg {
+    filter: blur(8rpx);
+}
+
+/* 用户头像样式 */
+.user_info_wrap {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 148rpx;
+    text-align: center;
+    color: #fff;
+}
+
+/* 头像图片样式 */
+.user_info_wrap image {
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 50%;
+}
+
+/* 用户昵称样式 */
+.user_nickname {
+    font-size: 34rpx;
+    margin-top: 50rpx;
+}
+
+/* 用户详情样式 */
+.user_content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+/* 用户详情内容样式 */
+.user_main {
+    position: absolute;
+    top: -50rpx;
+    width: 94%;
+    font-size: 24rpx;
+}
+
+/* 用户关注信息样式 */
+.collect_wrap {
+    display: flex;
+    height: 120rpx;
+    width: 100%;
+    border-radius: 20rpx;
+    background-color: #fff;
+    margin-bottom: 30rpx;
+    box-shadow: 1rpx 1rpx 1rpx 1rpx #ddd;
+}
+
+/* 收藏的店铺样式 */
+.collect_item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* 收藏数量样式 */
+.collect_item text {
+    color: var(--themeColor);
+}
+
+/* 用户订单详情样式 */
+.order_wrap {
+    height: 180rpx;
+    border-radius: 20rpx;
+    background-color: #fff;
+    margin-bottom: 20rpx;
+    box-shadow: 1rpx 1rpx 1rpx 1rpx #ddd;
+}
+
+/* 我的订单样式 */
+.order_title {
+    padding: 12rpx 30rpx;
+    font-size: 28rpx;
+    border-bottom: 2rpx solid #dedede;
+}
+
+/* 订单详情样式 */
+.order_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20rpx 0;
+}
+
+/* 全部订单样式 */
+.order_item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 订单图标样式 */
+.order_item text {
+    font-size: 38rpx;
+    color: #f4f;
+}
+
+/* 收货地址样式 */
+.address_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20rpx;
+    background-color: #fff;
+    border-radius: 14rpx;
+    margin-bottom: 20rpx;
+    box-shadow: 1rpx 1rpx 1rpx 1rpx #ddd;
+}
+
+/* 右箭头样式 */
+.address_wrap text {
+    color: #ccc;
+}
+
+/* 客服服务样式 */
+.other_wrap {
+    padding: 0 20rpx;
+    background-color: #fff;
+    border-radius: 20rpx;
+    margin-bottom: 20rpx;
+    box-shadow: 1rpx 1rpx 1rpx 1rpx #ddd;
+}
+
+/* 联系客服样式 */
+.other_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16rpx;
+    border-bottom: 2rpx solid #ccc;
+}
+
+/* 客服服务边框样式 */
+.other_item:last-child {
+    border-bottom: none;
+}
+
+/* 右箭头样式 */
+.other_item .icon {
+    color: #ccc;
+}
+
+/* 用户分享样式 */
+.user_main .share_wrap {
+    background-color: #fff;
+    margin-bottom: 30rpx;
+    padding: 0 20rpx;
+    border-radius: 16rpx;
+    box-shadow: 1rpx 1rpx 1rpx 1rpx #ddd;
+}
+
+/* 分享样式 */
+.share-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20rpx;
+}
+
+/* 右箭头样式 */
+.share_wrap .icon {
+    color: #ccc;
+}

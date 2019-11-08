@@ -1,66 +1,29 @@
-// pages/personal/index.js
+/* 个人中心页面 js */
+
+// 个人中心实例
 Page({
-
-    /**
-     * 页面的初始数据
-     */
+    // 指定 个人中心 数据
     data: {
-
+        userInfo: {},   // 接收 用户信息 数据
     },
 
-    /**
-     * 生命周期函数--监听页面加载
-     */
-    onLoad: function (options) {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady: function () {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow: function () {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
-    onHide: function () {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面卸载
-     */
-    onUnload: function () {
-
-    },
-
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh: function () {
-
-    },
-
-    /**
-     * 页面上拉触底事件的处理函数
-     */
-    onReachBottom: function () {
-
-    },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage: function () {
-
+    // 页面加载 完成执行
+    onShow() {
+        // 从本地获取 用户信息数据
+        const userInfo = wx.getStorageSync('userInfo');
+        
+        // 判断 如果没有用户信息
+        if (!userInfo) {
+            // 跳转到 登录页面
+            wx.navigateTo({
+                url: '/pages/login/index'
+            });
+            return  // 退出
+        }
+        
+        // 保存 用户信息
+        this.setData({
+            userInfo
+        })
     }
 })
